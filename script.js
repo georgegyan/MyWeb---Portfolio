@@ -44,18 +44,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Skills data
-    const skills = [
-        { name: 'HTML5', icon: 'fab fa-html5', color: 'text-orange-500' },
-        { name: 'CSS3', icon: 'fab fa-css3-alt', color: 'text-blue-500' },
-        { name: 'JavaScript', icon: 'fab fa-js', color: 'text-yellow-500' },
-        { name: 'React', icon: 'fab fa-react', color: 'text-blue-400' },
-        { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-green-600' },
-        { name: 'Tailwind CSS', icon: 'fas fa-paint-brush', color: 'text-cyan-400' },
-        { name: 'Git', icon: 'fab fa-git-alt', color: 'text-red-500' },
-        { name: 'Python', icon: 'fab fa-python', color: 'text-blue-600' },
-        { name: 'Docker', icon: 'fab fa-docker', color: 'text-blue-300' },
-        { name: 'AWS', icon: 'fab fa-aws', color: 'text-orange-400' }
-    ];
+   // Updated skills data in script.js
+const skills = [
+    { name: 'Django', icon: 'fab fa-python', color: 'text-green-800' },
+    { name: 'MongoDB', icon: 'fas fa-database', color: 'text-green-600' },
+    { name: 'MySQL', icon: 'fas fa-database', color: 'text-blue-600' },
+    { name: 'Java', icon: 'fab fa-java', color: 'text-red-600' },
+    { name: 'C++', icon: 'fas fa-code', color: 'text-blue-400' },
+    { name: 'Python', icon: 'fab fa-python', color: 'text-blue-600' },
+    { name: 'JavaScript', icon: 'fab fa-js', color: 'text-yellow-500' },
+    { name: 'React', icon: 'fab fa-react', color: 'text-blue-400' },
+    { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-green-600' },
+    { name: 'HTML5', icon: 'fab fa-html5', color: 'text-orange-500' },
+    { name: 'CSS3', icon: 'fab fa-css3-alt', color: 'text-blue-500' },
+    { name: 'Git', icon: 'fab fa-git-alt', color: 'text-red-500' }
+];
+
+// Add this to your existing script.js
+const tools = [
+    { name: 'VS Code', icon: 'fas fa-code', color: 'text-blue-500' },
+    { name: 'GitHub', icon: 'fab fa-github', color: 'text-gray-800 dark:text-gray-300' },
+    { name: 'Docker', icon: 'fab fa-docker', color: 'text-blue-400' },
+    { name: 'Postman', icon: 'fas fa-server', color: 'text-orange-500' },
+    { name: 'Figma', icon: 'fab fa-figma', color: 'text-purple-500' },
+    { name: 'NPM', icon: 'fab fa-npm', color: 'text-red-500' },
+    { name: 'Terminal', icon: 'fas fa-terminal', color: 'text-gray-600' }
+];
+
+// Add this to your DOMContentLoaded function
+const toolsContainer = document.getElementById('tools-container');
+if (toolsContainer) {
+    tools.forEach(tool => {
+        const toolElement = document.createElement('div');
+        toolElement.className = 'bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center space-y-3 transition-transform hover:scale-105';
+        toolElement.innerHTML = `
+            <i class="${tool.icon} ${tool.color} text-4xl"></i>
+            <span class="font-medium text-center">${tool.name}</span>
+        `;
+        toolsContainer.appendChild(toolElement);
+    });
+}
+
+// The rest of your script.js remains exactly the same...
     
     // Populate skills section
     const skillsContainer = document.getElementById('skills-container');
@@ -74,22 +104,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Projects data
     const projects = [
         { 
-            title: 'E-commerce Platform', 
-            description: 'A full-featured online store with cart functionality, user authentication, and payment processing.',
-            tags: ['React', 'Node.js', 'MongoDB'],
-            image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
+            title: 'WeatherApp', 
+            description: 'A full-featured web application that allow users to check real-time weather conditions for any city or location across the world.',
+            tags: ['React', 'Python Django', 'SQLite'],
+            image: 'images/project-1.jpg'
         },
         { 
-            title: 'Task Management App', 
-            description: 'A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.',
-            tags: ['React', 'Firebase', 'Tailwind CSS'],
-            image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
+            title: 'Event Management App', 
+            description: 'A platform that helps organize, manage, and track events such as conferences, workshops, parties or fundraisers.',
+            tags: ['HTML', 'CSS', 'Python Django'],
+            image: 'images/project-2.jpg'
         },
         { 
-            title: 'Weather Dashboard', 
-            description: 'Real-time weather information with 5-day forecast using data from a weather API.',
-            tags: ['JavaScript', 'API', 'CSS'],
-            image: 'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1375&q=80'
+            title: 'Attendance Management System', 
+            description: 'This is a software solution designed to track and record the presence or absence of individuals typically students or employees.',
+            tags: ['JavaScript', 'Django RESTframwork', 'Python'],
+            image: 'images/project-3.jpg'
         }
     ];
     
@@ -109,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="flex flex-wrap gap-2 mb-4">
                         ${project.tags.map(tag => `<span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">${tag}</span>`).join('')}
                     </div>
-                    <a href="#" class="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">View Project →</a>
+                    <a href="https://github.com/georgegyan" class="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">View Project →</a>
                 </div>
             `;
             projectsContainer.appendChild(projectElement);

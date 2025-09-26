@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaSc
 
 ## 🚀 Live Demo
 
-[https://myprofile-kohl-kappa.vercel.app/](https://myprofile-kohl-kappa.vercel.app/)
+[https://myprofile-kohl-kappa.vercel.app/](https://adombiregeorge.vercel.app/)
 
 ## ✨ Features
 

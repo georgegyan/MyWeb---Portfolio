@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://admobiregeorge.vercel.app/sitemap.xml
